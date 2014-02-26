@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB909D7B18BE129300EF2795 /* libVRFoundationToolkit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB909D7518BE127800EF2795 /* libVRFoundationToolkit.a */; };
 		ABE888D01842ED8B001FEF19 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABE888CF1842ED8B001FEF19 /* Foundation.framework */; };
 		ABE888D21842ED8B001FEF19 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABE888D11842ED8B001FEF19 /* CoreGraphics.framework */; };
 		ABE888D41842ED8B001FEF19 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABE888D31842ED8B001FEF19 /* UIKit.framework */; };
@@ -20,7 +21,32 @@
 		ABE889A218443346001FEF19 /* VRMySettings.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE889A118443346001FEF19 /* VRMySettings.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		AB909D7418BE127800EF2795 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AB909D6F18BE127800EF2795 /* VRFoundationToolkit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AB3CA4A418B768EA0079964E;
+			remoteInfo = VRFoundationToolkit;
+		};
+		AB909D7618BE127800EF2795 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AB909D6F18BE127800EF2795 /* VRFoundationToolkit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AB3CA4B418B768EA0079964E;
+			remoteInfo = VRFoundationToolkitTests;
+		};
+		AB909D7918BE128E00EF2795 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AB909D6F18BE127800EF2795 /* VRFoundationToolkit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = AB3CA4A318B768EA0079964E;
+			remoteInfo = VRFoundationToolkit;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		AB909D6F18BE127800EF2795 /* VRFoundationToolkit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = VRFoundationToolkit.xcodeproj; path = VRAppSettingsExample/Requirements/VRFoundationToolkit/VRFoundationToolkit.xcodeproj; sourceTree = "<group>"; };
 		ABE888CC1842ED8B001FEF19 /* VRAppSettingsExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VRAppSettingsExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABE888CF1842ED8B001FEF19 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		ABE888D11842ED8B001FEF19 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -47,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB909D7B18BE129300EF2795 /* libVRFoundationToolkit.a in Frameworks */,
 				ABE888D21842ED8B001FEF19 /* CoreGraphics.framework in Frameworks */,
 				ABE888D41842ED8B001FEF19 /* UIKit.framework in Frameworks */,
 				ABE888D01842ED8B001FEF19 /* Foundation.framework in Frameworks */,
@@ -56,10 +83,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AB909D7018BE127800EF2795 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AB909D7518BE127800EF2795 /* libVRFoundationToolkit.a */,
+				AB909D7718BE127800EF2795 /* VRFoundationToolkitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AB909D7818BE128400EF2795 /* Requirements */ = {
+			isa = PBXGroup;
+			children = (
+				AB909D6F18BE127800EF2795 /* VRFoundationToolkit.xcodeproj */,
+			);
+			name = Requirements;
+			sourceTree = "<group>";
+		};
 		ABE888C31842ED8B001FEF19 = {
 			isa = PBXGroup;
 			children = (
 				ABE889151842F267001FEF19 /* VRAppSettings */,
+				AB909D7818BE128400EF2795 /* Requirements */,
 				ABE888D51842ED8B001FEF19 /* VRAppSettingsExample */,
 				ABE888CE1842ED8B001FEF19 /* Frameworks */,
 				ABE888CD1842ED8B001FEF19 /* Products */,
@@ -135,6 +180,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				AB909D7A18BE128E00EF2795 /* PBXTargetDependency */,
 			);
 			name = VRAppSettingsExample;
 			productName = IRAppSettingsExample;
@@ -162,12 +208,35 @@
 			mainGroup = ABE888C31842ED8B001FEF19;
 			productRefGroup = ABE888CD1842ED8B001FEF19 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = AB909D7018BE127800EF2795 /* Products */;
+					ProjectRef = AB909D6F18BE127800EF2795 /* VRFoundationToolkit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				ABE888CB1842ED8B001FEF19 /* VRAppSettingsExample */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		AB909D7518BE127800EF2795 /* libVRFoundationToolkit.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libVRFoundationToolkit.a;
+			remoteRef = AB909D7418BE127800EF2795 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AB909D7718BE127800EF2795 /* VRFoundationToolkitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = VRFoundationToolkitTests.xctest;
+			remoteRef = AB909D7618BE127800EF2795 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		ABE888CA1842ED8B001FEF19 /* Resources */ = {
@@ -196,6 +265,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AB909D7A18BE128E00EF2795 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = VRFoundationToolkit;
+			targetProxy = AB909D7918BE128E00EF2795 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		ABE888D81842ED8B001FEF19 /* InfoPlist.strings */ = {
@@ -250,8 +327,17 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"./VRAppSettingsExample/Requirements/**\"",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					$inherited,
+					"-ObjC",
+				);
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -284,7 +370,16 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"./VRAppSettingsExample/Requirements/**\"",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = (
+					$inherited,
+					"-ObjC",
+				);
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

@@ -72,7 +72,7 @@
             NSDictionary *appDefaults = [NSDictionary dictionaryWithObject:appStateObjData forKey:[self userDefaultsKey]];
             [[NSUserDefaults standardUserDefaults] registerDefaults:appDefaults];  // register defaults in system
         } else {
-            KSLOG_ERROR(@"Can't register defaults. Archiving of self failed!");
+            VRLOG_ERROR(@"Can't register defaults. Archiving of self failed!");
             return nil;
         }
     }
@@ -94,11 +94,11 @@
             id selfsCopy = [NSKeyedUnarchiver unarchiveObjectWithData:appStateObjData];
             [selfsCopy deepCopyPropertiesTo:self];
         } else {
-            KSLOG_ERROR(@"Value in user defaults key %@ is not of NSData class. Can't unarchive and reset.", [self userDefaultsKey]);
+            VRLOG_ERROR(@"Value in user defaults key %@ is not of NSData class. Can't unarchive and reset.", [self userDefaultsKey]);
         }
     }
     @catch (NSException *exception) {
-        KSLOG_ERROR(@"Exception %@: %@", exception.name, exception.reason);
+        VRLOG_ERROR(@"Exception %@: %@", exception.name, exception.reason);
         [self resetToDeveloperDefaults]; // our options are coruppted fall back to hardcoded default values
     }
 }
@@ -130,7 +130,7 @@
     //  dispatch_once(&once, ^ { sharedInstance = [[[self class] alloc] init]; });
     //  return sharedInstance;
 #else
-    RETURN_SINGLETON;
+    VRRETURN_SINGLETON;
 #endif
 }
 

@@ -40,12 +40,12 @@
 
 - (void)dumpMySettingsAndUserDefaults
 {
-    self.mySettingsTextView.text = [[VRMySettings sharedInstance] descriptionWithPropertiesValues];
+    self.mySettingsTextView.text = [[VRMySettings sharedInstance] descriptionWithProperties];
     NSData * setObjData = [[NSUserDefaults standardUserDefaults] objectForKey:[[VRMySettings sharedInstance] userDefaultsKey]];
     if ([setObjData isKindOfClass:[NSData class]]) {
         self.userDefaultsTextView.text = [NSString stringWithFormat:@"key %@ =\n%@",
                                           [[VRMySettings sharedInstance] userDefaultsKey],
-                                          [[NSKeyedUnarchiver unarchiveObjectWithData:setObjData] descriptionWithPropertiesValues]];
+                                          [[NSKeyedUnarchiver unarchiveObjectWithData:setObjData] descriptionWithProperties]];
     } else {
         self.userDefaultsTextView.text = @"";
     }
