@@ -6,6 +6,7 @@
 //
 
 #import "VRAppSettings.h"
+#import "VRFoundationToolkit.h"
 
 @interface VRAppSettings ()
 - (NSString *)userDefaultsKey;
