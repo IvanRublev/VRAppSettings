@@ -6,9 +6,26 @@
 //
 
 #import "NSObject+VRPropertiesProcessing.h"
-#import "VRLog.h"
 #import "VRProtocolConformation.h"
 #import <objc/runtime.h>
+
+#define VREPLogLevel 0 // 0 - no console log, 1 - errors, 2 - trace
+
+#ifdef DEBUG
+#if VREPLogLevel>0
+#define VREPLOG_ERROR NSLog
+#endif
+#if VREPLogLevel>1
+#define VREPLOG_TRACE NSLog
+#endif
+#endif
+
+#ifndef VREPLOG_TRACE
+#define VREPLOG_TRACE(FMT, ...)
+#endif
+#ifndef VREPLOG_ERROR
+#define VREPLOG_ERROR(FMT, ...)
+#endif
 
 #define kNSObjectVRPropertiesProcessingIgnorePrefix @"const"
 @implementation NSObject (VRPropertiesProcessing)
@@ -18,7 +35,7 @@
     unsigned count;
     objc_property_t *properties = class_copyPropertyList([self class], &count);
     if (properties == nil || count == 0) {
-        VRLOG_DEBUG(@"No properties in object!");
+        VREPLOG_ERROR(@"No properties in object!");
         return;
     }
     unsigned i;
@@ -86,11 +103,11 @@
                     }
 #ifdef DEBUG
                 } else {
-                    VRLOG_DEBUG(@"Can't compare property .%@ by value. Deep copies of propertie's value are not equal. You must implement address independet [- isEqual:], for (%@) class or some of it's members.", propertyName, NSStringFromClass(valuesClass));
+                    VREPLOG_ERROR(@"Can't compare property .%@ by value. Deep copies of propertie's value are not equal. You must implement address independet [- isEqual:], for (%@) class or some of it's members.", propertyName, NSStringFromClass(valuesClass));
                 }
 #endif
             } else {
-                VRLOG_ERROR(@"Value of property .%@ not supporting [-isEqual:]. So instances of class (%@) can't be compared!", propertyName, NSStringFromClass([self class]));
+                VREPLOG_ERROR(@"Value of property .%@ not supporting [-isEqual:]. So instances of class (%@) can't be compared!", propertyName, NSStringFromClass([self class]));
                 equal = NO;
             }
         }
@@ -122,13 +139,13 @@
 - (void)deepCopyPropertiesTo:(id)targetObject
 {
     if (![targetObject isMemberOfClass:[self class]]) {
-        VRLOG_ERROR(@"Can't deep copy propeties. targetObject class (%@) differs from self's class (%@).", NSStringFromClass([targetObject class]), NSStringFromClass([self class]));
+        VREPLOG_ERROR(@"Can't deep copy propeties. targetObject class (%@) differs from self's class (%@).", NSStringFromClass([targetObject class]), NSStringFromClass([self class]));
         return;
     }
     [self enumeratePropertiesUsingBlock:^(NSString *propertyName, id propertyValue, __unsafe_unretained Class valuesClass) {
         id propertyValueDeepCopy = deepCopyOfObj(propertyValue);
         if (propertyValue != nil && propertyValueDeepCopy == nil) {
-            VRLOG_ERROR(@"Error occured on copying of .%@ property value.", propertyName);
+            VREPLOG_ERROR(@"Error occured on copying of .%@ property value.", propertyName);
         } else {
             [targetObject setValue:propertyValueDeepCopy forKey:propertyName];
         }
@@ -175,16 +192,16 @@
                     [aCoder encodeObject:propertyValue forKey:[self keyForPropertyName:propertyName]];
                 }
                 @catch (NSException *exception) {
-                    VRLOG_ERROR(@"Exeption on coding property .%@. %@: %@.", propertyName, exception.name, exception.reason);
+                    VREPLOG_ERROR(@"Exeption on coding property .%@. %@: %@.", propertyName, exception.name, exception.reason);
                 }
-                VRLOG_TRACE(@"Encoded [%@]%@: %@", valuesClass, propertyName, propertyValue);
+                VREPLOG_TRACE(@"Encoded [%@]%@: %@", valuesClass, propertyName, propertyValue);
             } else {
 #ifdef DEBUG
-                VRLOG_ERROR(@"Property %@ of class %@ is not saved! It or its members doesn't support NSCoding protocol!", propertyName, NSStringFromClass(valuesClass));
+                VREPLOG_ERROR(@"Property %@ of class %@ is not saved! It or its members doesn't support NSCoding protocol!", propertyName, NSStringFromClass(valuesClass));
 #endif
             }
         } else {
-            VRLOG_TRACE(@"Value of .%@ is nil, not encoded.", propertyName);
+            VREPLOG_TRACE(@"Value of .%@ is nil, not encoded.", propertyName);
         }
     }];
 }
@@ -195,20 +212,20 @@
         [self enumeratePropertiesUsingBlock:^(NSString *propertyName, id propertyValue, __unsafe_unretained Class valuesClass) {
             if (propertyName != nil) {
                 if ([aDecoder containsValueForKey:[self keyForPropertyName:propertyName]]) {
-                    VRLOG_TRACE(@"Decoding [%@]%@", valuesClass, propertyName);
+                    VREPLOG_TRACE(@"Decoding [%@]%@", valuesClass, propertyName);
                     id value = nil;
                     @try {
                         value = [aDecoder decodeObjectForKey:[self keyForPropertyName:propertyName]];
                     }
                     @catch (NSException *exception) {
-                        VRLOG_ERROR(@"Exeption on decoding property .%@. %@: %@.", propertyName, exception.name, exception.reason);
+                        VREPLOG_ERROR(@"Exeption on decoding property .%@. %@: %@.", propertyName, exception.name, exception.reason);
                     }
                     [self setValue:value forKey:propertyName];
                 } else {
-                    VRLOG_TRACE(@"Property %@ is not restored! No data were saved for it.", propertyName);
+                    VREPLOG_TRACE(@"Property %@ is not restored! No data were saved for it.", propertyName);
                 }
             } else {
-                VRLOG_ERROR(@"Can't decode value for nil property name!");
+                VREPLOG_ERROR(@"Can't decode value for nil property name!");
             }
         }];
     }
@@ -227,7 +244,7 @@ FOUNDATION_STATIC_INLINE id deepCopyOfObj(id value)
         VRCanPerform(value, @selector(initWithCoder:), @protocol(NSCoding))) {
         newValue = [NSKeyedUnarchiver unarchiveObjectWithData:[NSKeyedArchiver archivedDataWithRootObject:value]];
     } else {
-        VRLOG_ERROR(@"Can't make deepCopy of object %@, it not supporting NSCoding protocol.", value);
+        VREPLOG_ERROR(@"Can't make deepCopy of object %@, it not supporting NSCoding protocol.", value);
     }
     return newValue;
 }
