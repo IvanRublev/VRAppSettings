@@ -63,3 +63,8 @@ For creating key name for [aCoder encodeObject: withKey: ]
 #### VRRETURN_SINGLETON
 
 Returns singleton.
+
+License
+-------
+
+MIT. Copyright (c) 2013 Ivan Rublev, ivan@ivanrublev.me 

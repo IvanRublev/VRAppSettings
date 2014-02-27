@@ -17,11 +17,11 @@
 #import "VRLog.h"
 #import "NSCoder+VRKeyName.h"
 #import "VRSingleton.h"
+#import "VRProtocolConformation.h"
 
 #import "NSFileManager+VRDocumentsDirectory.h"
 #import "NSDate+VRDurations.h"
 #import "NSString+VRmd5.h"
-#import "NSObject+VRProtocolsConformation.h"
 #import "NSObject+VRPropertiesProcessing.h"
 #import "NSArray+VRCheckMembers.h"
 #import "NSMutableDictionary+VRExchangeKeys.h"

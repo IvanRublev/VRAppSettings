@@ -7,7 +7,7 @@
 
 #import "NSObject+VRPropertiesProcessing.h"
 #import "VRLog.h"
-#import "NSObject+VRProtocolsConformation.h"
+#import "VRProtocolConformation.h"
 #import <objc/runtime.h>
 
 #define kNSObjectVRPropertiesProcessingIgnorePrefix @"const"
@@ -72,7 +72,7 @@
         if (propertyValue == nil) {
             equal = ([object valueForKey:propertyName] == nil);
         } else {
-            BOOL propertyValueSupportsCompare = [propertyValue canPerformSelector:@selector(isEqual:) underProtocol:@protocol(NSObject)];
+            BOOL propertyValueSupportsCompare = VRCanPerform(propertyValue, @selector(isEqual:), @protocol(NSObject));
             if (propertyValueSupportsCompare) {
 #ifdef DEBUG
                 // Check if [-isEqual] compares values by address.
@@ -147,22 +147,22 @@
             __block BOOL propertySupportsNSCoding = YES;
             if ([valuesClass isSubclassOfClass:[NSArray class]]) {
                 [((NSArray *)propertyValue) enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-                    if (![obj canPerformSelector:@selector(encodeWithCoder:) underProtocol:@protocol(NSCoding)]) {
+                    if (!VRCanPerform(obj, @selector(encodeWithCoder:), @protocol(NSCoding))) {
                         propertySupportsNSCoding = NO;
                         *stop = YES;
                     }
                 }];
             } else if ([valuesClass isSubclassOfClass:[NSDictionary class]]) {
                 [((NSDictionary *)propertyValue) enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
-                    if (![key canPerformSelector:@selector(encodeWithCoder:) underProtocol:@protocol(NSCoding)] ||
-                        ![obj canPerformSelector:@selector(encodeWithCoder:) underProtocol:@protocol(NSCoding)]) {
+                    if (!VRCanPerform(key, @selector(encodeWithCoder:), @protocol(NSCoding)) ||
+                        !VRCanPerform(obj, @selector(encodeWithCoder:), @protocol(NSCoding))) {
                         propertySupportsNSCoding = NO;
                         *stop = YES;
                     }
                 }];
             } else if ([valuesClass isSubclassOfClass:[NSSet class]]) {
                 [((NSSet *)propertyValue) enumerateObjectsUsingBlock:^(id obj, BOOL *stop) {
-                    if (![obj canPerformSelector:@selector(encodeWithCoder:) underProtocol:@protocol(NSCoding)]) {
+                    if (!VRCanPerform(obj, @selector(encodeWithCoder:), @protocol(NSCoding))) {
                         propertySupportsNSCoding = NO;
                         *stop = YES;
                     }
@@ -219,9 +219,12 @@
 #pragma mark Helpers
 FOUNDATION_STATIC_INLINE id deepCopyOfObj(id value)
 {
+    if (!value) {
+        return nil;
+    }
     id newValue = nil;
-    if ([value canPerformSelector:@selector(encodeWithCoder:) underProtocol:@protocol(NSCoding)] &&
-        [value canPerformSelector:@selector(initWithCoder:) underProtocol:@protocol(NSCoding)]) {
+    if (VRCanPerform(value, @selector(encodeWithCoder:), @protocol(NSCoding)) &&
+        VRCanPerform(value, @selector(initWithCoder:), @protocol(NSCoding))) {
         newValue = [NSKeyedUnarchiver unarchiveObjectWithData:[NSKeyedArchiver archivedDataWithRootObject:value]];
     } else {
         VRLOG_ERROR(@"Can't make deepCopy of object %@, it not supporting NSCoding protocol.", value);
