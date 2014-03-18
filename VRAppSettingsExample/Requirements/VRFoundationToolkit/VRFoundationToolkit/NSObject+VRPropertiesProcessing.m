@@ -219,8 +219,17 @@
                     }
                     @catch (NSException *exception) {
                         VREPLOG_ERROR(@"Exeption on decoding property .%@. %@: %@.", propertyName, exception.name, exception.reason);
+                        value = nil;
                     }
-                    [self setValue:value forKey:propertyName];
+                    Class propertyClass = [self classOfPropertyNamed:propertyName];
+                    if (propertyClass == nil ||
+                        [value isKindOfClass:propertyClass] ||
+                        ([propertyClass isSubclassOfClass:valuesClass] && class_getSuperclass(valuesClass) != Nil))
+                    {
+                        [self setValue:value forKey:propertyName];
+                    } else {
+                        VREPLOG_ERROR(@"Can't set value becuse of classes type mismatch.");
+                    }
                 } else {
                     VREPLOG_TRACE(@"Property %@ is not restored! No data were saved for it.", propertyName);
                 }
@@ -230,6 +239,69 @@
         }];
     }
     return self;
+}
+
+- (Class)classOfPropertyNamed:(NSString*)propertyName
+{
+    if (![propertyName length]) {
+        return nil;
+    }
+
+    Class propertyClass = nil;
+    objc_property_t property = class_getProperty([self class], [propertyName UTF8String]);
+    if (property == NULL) {
+        return nil;
+    }
+    
+    char *typeEncoding = nil;
+    typeEncoding = property_copyAttributeValue(property, "T");
+    if (!typeEncoding) {
+        return nil;
+    }
+    switch (typeEncoding[0])
+    {
+        case '@':
+        {
+            if (strlen(typeEncoding) >= 3)
+            {
+                char *className = strndup(typeEncoding + 2, strlen(typeEncoding) - 3);
+                __autoreleasing NSString *name = @(className);
+                NSRange range = [name rangeOfString:@"<"];
+                if (range.location != NSNotFound)
+                {
+                    name = [name substringToIndex:range.location];
+                }
+                propertyClass = NSClassFromString(name); // may be nil.
+                free(className);
+            }
+            break;
+        }
+        case 'c':
+        case 'i':
+        case 's':
+        case 'l':
+        case 'q':
+        case 'C':
+        case 'I':
+        case 'S':
+        case 'L':
+        case 'Q':
+        case 'f':
+        case 'd':
+        case 'B':
+        {
+            propertyClass = [NSNumber class];
+            break;
+        }
+        case '{':
+        {
+            propertyClass = [NSValue class];
+            break;
+        }
+    }
+    free(typeEncoding);
+    
+    return propertyClass;
 }
 
 #pragma mark -

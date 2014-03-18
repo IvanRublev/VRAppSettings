@@ -7,8 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB03521E18D07889006C69D0 /* VRURLConnectionChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = AB03521D18D07889006C69D0 /* VRURLConnectionChecker.m */; };
 		AB0A048718BF14ED00A377B4 /* VRLogTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AB0A048618BF14ED00A377B4 /* VRLogTests.m */; };
 		AB0A049B18BF4AD400A377B4 /* VRProtocolConformationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AB0A049A18BF4AD400A377B4 /* VRProtocolConformationTests.m */; };
+		AB10F5B718C4B1A50008A076 /* NSBundle+VRDisplayName.m in Sources */ = {isa = PBXBuildFile; fileRef = AB10F5B618C4B1A50008A076 /* NSBundle+VRDisplayName.m */; };
+		AB352DF218CBF46F00F6C8B6 /* EXTADT.m in Sources */ = {isa = PBXBuildFile; fileRef = AB352DBA18CBF46F00F6C8B6 /* EXTADT.m */; };
+		AB352DF318CBF46F00F6C8B6 /* EXTConcreteProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = AB352DBC18CBF46F00F6C8B6 /* EXTConcreteProtocol.m */; };
+		AB352DF418CBF46F00F6C8B6 /* EXTNil.m in Sources */ = {isa = PBXBuildFile; fileRef = AB352DC018CBF46F00F6C8B6 /* EXTNil.m */; };
+		AB352DF518CBF46F00F6C8B6 /* EXTRuntimeExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = AB352DC418CBF46F00F6C8B6 /* EXTRuntimeExtensions.m */; };
+		AB352DF618CBF46F00F6C8B6 /* EXTSafeCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = AB352DC618CBF46F00F6C8B6 /* EXTSafeCategory.m */; };
+		AB352DF718CBF46F00F6C8B6 /* EXTScope.m in Sources */ = {isa = PBXBuildFile; fileRef = AB352DC818CBF46F00F6C8B6 /* EXTScope.m */; };
+		AB352DF818CBF46F00F6C8B6 /* EXTSelectorChecking.m in Sources */ = {isa = PBXBuildFile; fileRef = AB352DCA18CBF46F00F6C8B6 /* EXTSelectorChecking.m */; };
+		AB352DF918CBF46F00F6C8B6 /* NSInvocation+EXT.m in Sources */ = {isa = PBXBuildFile; fileRef = AB352DCE18CBF46F00F6C8B6 /* NSInvocation+EXT.m */; };
+		AB352DFA18CBF46F00F6C8B6 /* NSMethodSignature+EXT.m in Sources */ = {isa = PBXBuildFile; fileRef = AB352DD018CBF46F00F6C8B6 /* NSMethodSignature+EXT.m */; };
+		AB352E1718CBF63900F6C8B6 /* EXTScope.m in Sources */ = {isa = PBXBuildFile; fileRef = AB352DC818CBF46F00F6C8B6 /* EXTScope.m */; };
+		AB352E1D18CCDBDD00F6C8B6 /* VREnumTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AB352E1C18CCDBDD00F6C8B6 /* VREnumTests.m */; };
 		AB3CA4A818B768EA0079964E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB3CA4A718B768EA0079964E /* Foundation.framework */; };
 		AB3CA4AD18B768EA0079964E /* VRFoundationToolkit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = AB3CA4AC18B768EA0079964E /* VRFoundationToolkit.h */; };
 		AB3CA4B618B768EA0079964E /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB3CA4B518B768EA0079964E /* XCTest.framework */; };
@@ -68,8 +81,39 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AB03521C18D07889006C69D0 /* VRURLConnectionChecker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRURLConnectionChecker.h; sourceTree = "<group>"; };
+		AB03521D18D07889006C69D0 /* VRURLConnectionChecker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRURLConnectionChecker.m; sourceTree = "<group>"; };
 		AB0A048618BF14ED00A377B4 /* VRLogTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRLogTests.m; sourceTree = "<group>"; };
 		AB0A049A18BF4AD400A377B4 /* VRProtocolConformationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRProtocolConformationTests.m; sourceTree = "<group>"; };
+		AB10F5B518C4B1A50008A076 /* NSBundle+VRDisplayName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+VRDisplayName.h"; sourceTree = "<group>"; };
+		AB10F5B618C4B1A50008A076 /* NSBundle+VRDisplayName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+VRDisplayName.m"; sourceTree = "<group>"; };
+		AB352DB918CBF46F00F6C8B6 /* EXTADT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTADT.h; sourceTree = "<group>"; };
+		AB352DBA18CBF46F00F6C8B6 /* EXTADT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXTADT.m; sourceTree = "<group>"; };
+		AB352DBB18CBF46F00F6C8B6 /* EXTConcreteProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTConcreteProtocol.h; sourceTree = "<group>"; };
+		AB352DBC18CBF46F00F6C8B6 /* EXTConcreteProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXTConcreteProtocol.m; sourceTree = "<group>"; };
+		AB352DBD18CBF46F00F6C8B6 /* EXTCoroutine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTCoroutine.h; sourceTree = "<group>"; };
+		AB352DBE18CBF46F00F6C8B6 /* EXTKeyPathCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTKeyPathCoding.h; sourceTree = "<group>"; };
+		AB352DBF18CBF46F00F6C8B6 /* EXTNil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTNil.h; sourceTree = "<group>"; };
+		AB352DC018CBF46F00F6C8B6 /* EXTNil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXTNil.m; sourceTree = "<group>"; };
+		AB352DC118CBF46F00F6C8B6 /* extobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = extobjc.h; sourceTree = "<group>"; };
+		AB352DC218CBF46F00F6C8B6 /* extobjc_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = extobjc_Prefix.pch; sourceTree = "<group>"; };
+		AB352DC318CBF46F00F6C8B6 /* EXTRuntimeExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTRuntimeExtensions.h; sourceTree = "<group>"; };
+		AB352DC418CBF46F00F6C8B6 /* EXTRuntimeExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXTRuntimeExtensions.m; sourceTree = "<group>"; };
+		AB352DC518CBF46F00F6C8B6 /* EXTSafeCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTSafeCategory.h; sourceTree = "<group>"; };
+		AB352DC618CBF46F00F6C8B6 /* EXTSafeCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXTSafeCategory.m; sourceTree = "<group>"; };
+		AB352DC718CBF46F00F6C8B6 /* EXTScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTScope.h; sourceTree = "<group>"; };
+		AB352DC818CBF46F00F6C8B6 /* EXTScope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXTScope.m; sourceTree = "<group>"; };
+		AB352DC918CBF46F00F6C8B6 /* EXTSelectorChecking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTSelectorChecking.h; sourceTree = "<group>"; };
+		AB352DCA18CBF46F00F6C8B6 /* EXTSelectorChecking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXTSelectorChecking.m; sourceTree = "<group>"; };
+		AB352DCB18CBF46F00F6C8B6 /* EXTSynthesize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTSynthesize.h; sourceTree = "<group>"; };
+		AB352DCC18CBF46F00F6C8B6 /* metamacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = metamacros.h; sourceTree = "<group>"; };
+		AB352DCD18CBF46F00F6C8B6 /* NSInvocation+EXT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSInvocation+EXT.h"; sourceTree = "<group>"; };
+		AB352DCE18CBF46F00F6C8B6 /* NSInvocation+EXT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSInvocation+EXT.m"; sourceTree = "<group>"; };
+		AB352DCF18CBF46F00F6C8B6 /* NSMethodSignature+EXT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMethodSignature+EXT.h"; sourceTree = "<group>"; };
+		AB352DD018CBF46F00F6C8B6 /* NSMethodSignature+EXT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMethodSignature+EXT.m"; sourceTree = "<group>"; };
+		AB352E1618CBF56100F6C8B6 /* libextobjc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = libextobjc.h; sourceTree = "<group>"; };
+		AB352E1818CCDA6500F6C8B6 /* VREnum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VREnum.h; sourceTree = "<group>"; };
+		AB352E1C18CCDBDD00F6C8B6 /* VREnumTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VREnumTests.m; sourceTree = "<group>"; };
 		AB3CA4A418B768EA0079964E /* libVRFoundationToolkit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libVRFoundationToolkit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB3CA4A718B768EA0079964E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AB3CA4AB18B768EA0079964E /* VRFoundationToolkit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VRFoundationToolkit-Prefix.pch"; sourceTree = "<group>"; };
@@ -126,6 +170,72 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AB03521F18D07890006C69D0 /* VRURLConnectionChecker */ = {
+			isa = PBXGroup;
+			children = (
+				AB03521C18D07889006C69D0 /* VRURLConnectionChecker.h */,
+				AB03521D18D07889006C69D0 /* VRURLConnectionChecker.m */,
+			);
+			name = VRURLConnectionChecker;
+			sourceTree = "<group>";
+		};
+		AB10F5B118C4B1000008A076 /* NSBundle+VRDisplayName */ = {
+			isa = PBXGroup;
+			children = (
+				AB10F5B518C4B1A50008A076 /* NSBundle+VRDisplayName.h */,
+				AB10F5B618C4B1A50008A076 /* NSBundle+VRDisplayName.m */,
+			);
+			name = "NSBundle+VRDisplayName";
+			sourceTree = "<group>";
+		};
+		AB352DB318CBF46F00F6C8B6 /* Requirements */ = {
+			isa = PBXGroup;
+			children = (
+				AB352DB418CBF46F00F6C8B6 /* libextobjc */,
+				AB352E1618CBF56100F6C8B6 /* libextobjc.h */,
+			);
+			path = Requirements;
+			sourceTree = "<group>";
+		};
+		AB352DB418CBF46F00F6C8B6 /* libextobjc */ = {
+			isa = PBXGroup;
+			children = (
+				AB352DB818CBF46F00F6C8B6 /* extobjc */,
+			);
+			path = libextobjc;
+			sourceTree = "<group>";
+		};
+		AB352DB818CBF46F00F6C8B6 /* extobjc */ = {
+			isa = PBXGroup;
+			children = (
+				AB352DB918CBF46F00F6C8B6 /* EXTADT.h */,
+				AB352DBA18CBF46F00F6C8B6 /* EXTADT.m */,
+				AB352DBB18CBF46F00F6C8B6 /* EXTConcreteProtocol.h */,
+				AB352DBC18CBF46F00F6C8B6 /* EXTConcreteProtocol.m */,
+				AB352DBD18CBF46F00F6C8B6 /* EXTCoroutine.h */,
+				AB352DBE18CBF46F00F6C8B6 /* EXTKeyPathCoding.h */,
+				AB352DBF18CBF46F00F6C8B6 /* EXTNil.h */,
+				AB352DC018CBF46F00F6C8B6 /* EXTNil.m */,
+				AB352DC118CBF46F00F6C8B6 /* extobjc.h */,
+				AB352DC218CBF46F00F6C8B6 /* extobjc_Prefix.pch */,
+				AB352DC318CBF46F00F6C8B6 /* EXTRuntimeExtensions.h */,
+				AB352DC418CBF46F00F6C8B6 /* EXTRuntimeExtensions.m */,
+				AB352DC518CBF46F00F6C8B6 /* EXTSafeCategory.h */,
+				AB352DC618CBF46F00F6C8B6 /* EXTSafeCategory.m */,
+				AB352DC718CBF46F00F6C8B6 /* EXTScope.h */,
+				AB352DC818CBF46F00F6C8B6 /* EXTScope.m */,
+				AB352DC918CBF46F00F6C8B6 /* EXTSelectorChecking.h */,
+				AB352DCA18CBF46F00F6C8B6 /* EXTSelectorChecking.m */,
+				AB352DCB18CBF46F00F6C8B6 /* EXTSynthesize.h */,
+				AB352DCC18CBF46F00F6C8B6 /* metamacros.h */,
+				AB352DCD18CBF46F00F6C8B6 /* NSInvocation+EXT.h */,
+				AB352DCE18CBF46F00F6C8B6 /* NSInvocation+EXT.m */,
+				AB352DCF18CBF46F00F6C8B6 /* NSMethodSignature+EXT.h */,
+				AB352DD018CBF46F00F6C8B6 /* NSMethodSignature+EXT.m */,
+			);
+			path = extobjc;
+			sourceTree = "<group>";
+		};
 		AB3CA49B18B768EA0079964E = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				AB3CA4AC18B768EA0079964E /* VRFoundationToolkit.h */,
+				AB352DB318CBF46F00F6C8B6 /* Requirements */,
 				AB3CA4CD18B769690079964E /* Functions and categories */,
 				AB3CA4AA18B768EA0079964E /* Supporting Files */,
 			);
@@ -177,6 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				AB0A048618BF14ED00A377B4 /* VRLogTests.m */,
+				AB352E1C18CCDBDD00F6C8B6 /* VREnumTests.m */,
 				AB0A049A18BF4AD400A377B4 /* VRProtocolConformationTests.m */,
 				AB909D5918BDCC6200EF2795 /* NSObject+VRPropertiesProcessingTests */,
 				AB3CA4BE18B768EA0079964E /* Supporting Files */,
@@ -196,6 +308,7 @@
 		AB3CA4CD18B769690079964E /* Functions and categories */ = {
 			isa = PBXGroup;
 			children = (
+				AB03521F18D07890006C69D0 /* VRURLConnectionChecker */,
 				AB3CA58818B797090079964E /* NSMutableDictionary+VRExchangeKeys */,
 				AB3CA56218B785740079964E /* NSArray+VRCheckMembers */,
 				AB3CA4EF18B779190079964E /* NSString+VRMd5 */,
@@ -203,7 +316,9 @@
 				AB3CA4DF18B770270079964E /* NSFileManager+VRDocumentsDirectory */,
 				AB3CA4F318B77A830079964E /* VRProtocolConformation */,
 				AB909D5018BDC88700EF2795 /* NSObject+VRPropertiesProcessing */,
+				AB10F5B118C4B1000008A076 /* NSBundle+VRDisplayName */,
 				AB3CA4CE18B76ACA0079964E /* VRLog.h */,
+				AB352E1818CCDA6500F6C8B6 /* VREnum.h */,
 				AB3CA4E318B7714A0079964E /* NSCoder+VRKeyName.h */,
 				ABC9BF2818B9A0F800C6566F /* VRSingleton.h */,
 			);
@@ -329,7 +444,7 @@
 		AB3CA49C18B768EA0079964E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Ivan Rublev http://ivanrublev.me";
 			};
 			buildConfigurationList = AB3CA49F18B768EA0079964E /* Build configuration list for PBXProject "VRFoundationToolkit" */;
@@ -366,7 +481,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB352E1718CBF63900F6C8B6 /* EXTScope.m in Sources */,
+				AB10F5B718C4B1A50008A076 /* NSBundle+VRDisplayName.m in Sources */,
 				AB3CA58718B796A10079964E /* NSMutableDictionary+VRExchangeKeys.m in Sources */,
+				AB03521E18D07889006C69D0 /* VRURLConnectionChecker.m in Sources */,
 				AB909D4F18BDC86600EF2795 /* NSObject+VRPropertiesProcessing.m in Sources */,
 				AB3CA4E218B770470079964E /* NSFileManager+VRDocumentsDirectory.m in Sources */,
 				AB3CA4EE18B776DE0079964E /* NSString+VRMd5.m in Sources */,
@@ -380,11 +498,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB352DF318CBF46F00F6C8B6 /* EXTConcreteProtocol.m in Sources */,
 				AB0A048718BF14ED00A377B4 /* VRLogTests.m in Sources */,
+				AB352DF218CBF46F00F6C8B6 /* EXTADT.m in Sources */,
 				AB909D5518BDCBF000EF2795 /* VRPPMySuperClass.m in Sources */,
+				AB352DF618CBF46F00F6C8B6 /* EXTSafeCategory.m in Sources */,
+				AB352DF918CBF46F00F6C8B6 /* NSInvocation+EXT.m in Sources */,
+				AB352E1D18CCDBDD00F6C8B6 /* VREnumTests.m in Sources */,
+				AB352DF518CBF46F00F6C8B6 /* EXTRuntimeExtensions.m in Sources */,
 				AB0A049B18BF4AD400A377B4 /* VRProtocolConformationTests.m in Sources */,
 				AB909D5818BDCC1100EF2795 /* VRPPMyClass.m in Sources */,
 				AB909D5218BDCACE00EF2795 /* NSObject+VRPropertiesProcessingTests.m in Sources */,
+				AB352DFA18CBF46F00F6C8B6 /* NSMethodSignature+EXT.m in Sources */,
+				AB352DF418CBF46F00F6C8B6 /* EXTNil.m in Sources */,
+				AB352DF818CBF46F00F6C8B6 /* EXTSelectorChecking.m in Sources */,
+				AB352DF718CBF46F00F6C8B6 /* EXTScope.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,7 +542,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -442,9 +569,15 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\" ./VRFoundationToolkit/Requirements/**\"",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos6.0;
+				SDKROOT = iphoneos;
+				STRIP_STYLE = debugging;
 				VALID_ARCHS = "armv7 armv7s";
 			};
 			name = Debug;
@@ -453,7 +586,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -475,8 +607,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\" ./VRFoundationToolkit/Requirements/**\"",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				SDKROOT = iphoneos6.0;
+				SDKROOT = iphoneos;
+				STRIP_STYLE = debugging;
 				VALIDATE_PRODUCT = YES;
 				VALID_ARCHS = "armv7 armv7s";
 			};
@@ -511,7 +649,6 @@
 		AB3CA4CB18B768EA0079964E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -522,6 +659,11 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\" ./VRFoundationToolkit/**\"",
 				);
 				INFOPLIST_FILE = "VRFoundationToolkitTests/VRFoundationToolkitTests-Info.plist";
 				OTHER_LDFLAGS = (
@@ -537,7 +679,6 @@
 		AB3CA4CC18B768EA0079964E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -545,6 +686,11 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VRFoundationToolkit/VRFoundationToolkit-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\" ./VRFoundationToolkit/**\"",
+				);
 				INFOPLIST_FILE = "VRFoundationToolkitTests/VRFoundationToolkitTests-Info.plist";
 				OTHER_LDFLAGS = (
 					"$(inherited)",

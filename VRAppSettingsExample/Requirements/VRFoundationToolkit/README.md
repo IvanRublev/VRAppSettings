@@ -33,10 +33,6 @@ Calculates how much days, hours, minutes between two dates.
 
 MD5 hash on string.
 
-#### NSObject+VRProtocolsConformation
-
-To check if object conforms to protocol and realize specified method.
-
 #### NSObject+VRPropertiesProcessing
 
 Hash, equality, NSCoding universal methods for any object. Also one can process every property of object via block. 
@@ -63,6 +59,10 @@ For creating key name for [aCoder encodeObject: withKey: ]
 #### VRRETURN_SINGLETON
 
 Returns singleton.
+
+#### VRCanPerform
+
+Returns YES if object of id type responses to selector and conforms to protocol are specified.
 
 License
 -------
