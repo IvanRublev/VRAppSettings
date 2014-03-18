@@ -6,54 +6,51 @@
 //
 
 #import "VRAppSettings.h"
-#import "VRFoundationToolkit.h"
+#import "NSObject+VRPropertiesProcessing.h"
+#import "VRLog.h"
 
 @interface VRAppSettings ()
-- (NSString *)userDefaultsKey;
 @end
 
 @implementation VRAppSettings
 
 #pragma mark -
-#pragma mark Methods for overloading in subclass
+#pragma mark Methods are obligatory for subclass
 - (NSString *)userDefaultsKeyPostfix
 {
-    NSAssert(FALSE, @"[-userDefaultsKeyPostfix] must be overloaded to distincs settings sets.");
+    NSAssert(FALSE, @"[-userDefaultsKeyPostfix] must be overloaded in subclass to distincs settings sets. Must return value.");
     return nil;
 }
 
 - (void)resetToDeveloperDefaults
 {
-    NSAssert(FALSE, @"[-resetToDeveloperDefaults] must be overloaded in your subclass of IVRAppSettings class! Setup all properties to developer defaults there.");
+    NSAssert(FALSE, @"[-resetToDeveloperDefaults] must be overloaded in subclass to setup all properties to developer defaults there.");
 }
 
 - (void)checkAfterInitWithCoder
 {
-    NSAssert(FALSE, @"[-checkAfterInitWithCoder] must be overloaded in your subclass of IVRAppSettings class! Use it to make range checking of loaded properties, or leave it empty.");
+    NSAssert(FALSE, @"[-checkAfterInitWithCoder] must be overloaded in subclass to make range checking of loaded properties.");
 }
 
 #pragma mark -
-#pragma mark Helpers
-- (NSString *)userDefaultsKey
+#pragma mark Creating singleton or object
++ (instancetype)sharedInstance
 {
-    NSString * result = @"VRAppSettings";
-    NSString * postfix = [self userDefaultsKeyPostfix];
-    NSAssert(postfix, @""); // must be set.
-    if (postfix) {
-        result = [result stringByAppendingString:postfix];
+    static dispatch_once_t once;
+    static NSMutableDictionary * __strong sharedInstances;
+    dispatch_once(&once, ^ { sharedInstances = [[NSMutableDictionary alloc] init]; });
+    NSString * className = NSStringFromClass([self class]);
+    id theSharedInstance = nil;
+    if ([className length] > 0 && sharedInstances) {
+        theSharedInstance = sharedInstances[className];
+        if (!theSharedInstance) {
+            theSharedInstance = [[[self class] alloc] init];
+            sharedInstances[className] = theSharedInstance;
+        }
     }
-    return result;
+    return theSharedInstance;
 }
 
-- (NSData *)archive
-{
-    NSData * archive = [NSKeyedArchiver archivedDataWithRootObject:self];
-    return archive;
-}
-
-
-#pragma mark -
-#pragma mark Object livecycle
 - (id)init
 {
     self = [self initWithDeveloperDefaults];
@@ -80,13 +77,8 @@
     return self;
 }
 
-- (NSString *)description
-{
-    return [self descriptionWithProperties];
-}
-
 #pragma mark -
-#pragma mark Public actions
+#pragma mark Loading or synchronizing values of properties
 - (void)resetToUserDefaults
 {
     @try {
@@ -111,7 +103,8 @@
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
-// Erases user defaults and set them from init
+#pragma mark -
+#pragma mark Synchronizing to system user defaults with developer defaults values
 - (void)resetSelfAndUserDefaultsToDeveloperDefaults
 {
     [[NSUserDefaults standardUserDefaults] removeObjectForKey:[self userDefaultsKey]];
@@ -120,24 +113,37 @@
     [self synchronizeToUserDefaults];
 }
 
-+ (IVRAppSettingsClassName)sharedInstance
+
+#pragma mark -
+#pragma mark Key of singleton in system user defaults
+- (NSString *)userDefaultsKey
 {
-#ifdef IVRAppSettingsNoInstancetype
-    NSAssert(FALSE, @"'instancetype' is not supported. So [+sharedInstance] must be overloaded in child class with return type of that class name.");
-    return nil;
-    //  Use singleton approach:
-    //  static dispatch_once_t once;
-    //  static id __strong sharedInstance;
-    //  dispatch_once(&once, ^ { sharedInstance = [[[self class] alloc] init]; });
-    //  return sharedInstance;
-#else
-    VRRETURN_SINGLETON;
-#endif
+    NSString * result = @"VRAppSettings";
+    NSString * postfix = [self userDefaultsKeyPostfix];
+    NSAssert([postfix length], @""); // must be set.
+    if ([postfix length]) {
+        result = [result stringByAppendingString:postfix];
+    }
+    return result;
 }
 
 #pragma mark -
-#pragma mark NSCoding protocol
+#pragma mark Describing object
+- (NSString *)description
+{
+    return [self descriptionWithProperties];
+}
 
+#pragma mark -
+#pragma mark Helpers
+- (NSData *)archive
+{
+    NSData * archive = [NSKeyedArchiver archivedDataWithRootObject:self];
+    return archive;
+}
+
+#pragma mark -
+#pragma mark NSCoding protocol realized via properties processing
 - (NSString *)keyForPropertyName:(NSString *)propertyName
 {
     return [NSString stringWithFormat:@"%@.%@", [self userDefaultsKey], propertyName];

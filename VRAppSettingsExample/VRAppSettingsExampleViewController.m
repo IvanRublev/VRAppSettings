@@ -8,6 +8,7 @@
 
 #import "VRAppSettingsExampleViewController.h"
 #import "VRMySettings.h"
+#import "VRFoundationToolkit.h"
 
 @interface VRAppSettingsExampleViewController ()
 

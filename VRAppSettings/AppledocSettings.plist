@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+   <key>--company-id</key>
+   <string>me.ivanrublev</string>
+   <key>--create-docset</key>
+   <true/>
+   <key>--ignore</key>
+   <array>
+   <string>ThirdParty</string>
+   <string>Libraries</string>
+   <string>Frameworks</string>
+   <string>Testing</string>
+   </array>
+   <key>--install-docset</key>
+   <true/>
+   <key>no-repeat-first-par</key>
+   <true/>
+<!--<key>index-desc</key>
+   <string>./README.md</string>-->
+   <key>--output</key>
+   <string>/tmp</string>
+   <key>--project-company</key>
+   <string>Ivan Rublev</string>
+   <key>--project-name</key>
+   <string>VRAppSettings</string>
+   <key>--project-version</key>
+   <string>1.0</string>
+   <key>--keep-undocumented-objects</key>
+   <false/>
+   <key>--keep-undocumented-members</key>
+   <false/>
+   <key>--warn-undocumented-object</key>
+   <false/>
+   <key>--warn-undocumented-member</key>
+   <false/>
+   <key>--warn-empty-description</key>
+   <true/>
+   <key>--warn-missing-arg</key>
+   <true/>
+   <key>--warn-unknown-directive</key>
+   <true/>
+   <key>--logformat</key>
+   <string>xcode</string>
+   <key>--exit-threshold</key>
+   <integer>2</integer>
+ 	<key>--verbose</key>
+	<string>1</string>
+</dict>
+</plist>

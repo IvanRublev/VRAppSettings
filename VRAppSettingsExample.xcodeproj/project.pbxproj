@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		AB75D63818DEC3DC00D42415 /* Docset for Xcode */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = AB75D63C18DEC3DC00D42415 /* Build configuration list for PBXAggregateTarget "Docset for Xcode" */;
+			buildPhases = (
+				AB75D63D18DEC41700D42415 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = "Docset for Xcode";
+			productName = Documentation;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		AB909D7B18BE129300EF2795 /* libVRFoundationToolkit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB909D7518BE127800EF2795 /* libVRFoundationToolkit.a */; };
 		ABE888D01842ED8B001FEF19 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABE888CF1842ED8B001FEF19 /* Foundation.framework */; };
@@ -217,6 +231,7 @@
 			projectRoot = "";
 			targets = (
 				ABE888CB1842ED8B001FEF19 /* VRAppSettingsExample */,
+				AB75D63818DEC3DC00D42415 /* Docset for Xcode */,
 			);
 		};
 /* End PBXProject section */
@@ -250,6 +265,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AB75D63D18DEC41700D42415 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "APPLEDOC_PATH=$(whereis appledoc)\nif [ -f $APPLEDOC_PATH ]; then\n  echo \"Appledoc is found at $APPLEDOC_PATH\"\n    $APPLEDOC_PATH \"$SOURCE_ROOT/VRAppSettings\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		ABE888C81842ED8B001FEF19 /* Sources */ = {
@@ -294,6 +325,20 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		AB75D63918DEC3DC00D42415 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		AB75D63A18DEC3DC00D42415 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		ABE888FF1842ED8B001FEF19 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -417,6 +462,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		AB75D63C18DEC3DC00D42415 /* Build configuration list for PBXAggregateTarget "Docset for Xcode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB75D63918DEC3DC00D42415 /* Debug */,
+				AB75D63A18DEC3DC00D42415 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		ABE888C71842ED8B001FEF19 /* Build configuration list for PBXProject "VRAppSettingsExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
