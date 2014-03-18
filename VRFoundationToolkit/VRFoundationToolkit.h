@@ -14,7 +14,12 @@
 
 #import <Foundation/Foundation.h>
 
+// Import utility usefull in coding
+#import "libextobjc.h"
+
+// Routines
 #import "VRLog.h"
+#import "VREnum.h"
 #import "NSCoder+VRKeyName.h"
 #import "VRSingleton.h"
 #import "VRProtocolConformation.h"
@@ -25,3 +30,5 @@
 #import "NSObject+VRPropertiesProcessing.h"
 #import "NSArray+VRCheckMembers.h"
 #import "NSMutableDictionary+VRExchangeKeys.h"
+#import "NSBundle+VRDisplayName.h"
+#import "VRURLConnectionChecker.h"
