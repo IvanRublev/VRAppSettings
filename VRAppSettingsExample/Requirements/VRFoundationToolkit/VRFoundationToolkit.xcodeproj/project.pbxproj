@@ -43,6 +43,16 @@
 		AB3CA58F18B797AA0079964E /* VRProtocolConformation.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = AB3CA4F018B77A7B0079964E /* VRProtocolConformation.h */; };
 		AB3CA59018B797AA0079964E /* VRLog.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = AB3CA4CE18B76ACA0079964E /* VRLog.h */; };
 		AB3CA59118B797AA0079964E /* NSCoder+VRKeyName.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = AB3CA4E318B7714A0079964E /* NSCoder+VRKeyName.h */; };
+		AB907B9F18DA137100223363 /* EXTScope.m in Sources */ = {isa = PBXBuildFile; fileRef = AB352DC818CBF46F00F6C8B6 /* EXTScope.m */; };
+		AB907BA018DA138400223363 /* VRURLConnectionChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = AB03521D18D07889006C69D0 /* VRURLConnectionChecker.m */; };
+		AB907BA118DA138400223363 /* NSMutableDictionary+VRExchangeKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3CA58618B796A10079964E /* NSMutableDictionary+VRExchangeKeys.m */; };
+		AB907BA218DA138400223363 /* NSArray+VRCheckMembers.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3CA56018B785200079964E /* NSArray+VRCheckMembers.m */; };
+		AB907BA318DA138400223363 /* NSString+VRMd5.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3CA4ED18B776DE0079964E /* NSString+VRMd5.m */; };
+		AB907BA418DA138400223363 /* NSDate+VRDurations.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3CA4E918B775F00079964E /* NSDate+VRDurations.m */; };
+		AB907BA518DA138400223363 /* NSFileManager+VRDocumentsDirectory.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3CA4E118B770470079964E /* NSFileManager+VRDocumentsDirectory.m */; };
+		AB907BA618DA138400223363 /* VRProtocolConformation.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3CA4F118B77A7B0079964E /* VRProtocolConformation.m */; };
+		AB907BA718DA138400223363 /* NSObject+VRPropertiesProcessing.m in Sources */ = {isa = PBXBuildFile; fileRef = AB909D4E18BDC86600EF2795 /* NSObject+VRPropertiesProcessing.m */; };
+		AB907BA818DA138400223363 /* NSBundle+VRDisplayName.m in Sources */ = {isa = PBXBuildFile; fileRef = AB10F5B618C4B1A50008A076 /* NSBundle+VRDisplayName.m */; };
 		AB909D4F18BDC86600EF2795 /* NSObject+VRPropertiesProcessing.m in Sources */ = {isa = PBXBuildFile; fileRef = AB909D4E18BDC86600EF2795 /* NSObject+VRPropertiesProcessing.m */; };
 		AB909D5218BDCACE00EF2795 /* NSObject+VRPropertiesProcessingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AB909D5118BDCACE00EF2795 /* NSObject+VRPropertiesProcessingTests.m */; };
 		AB909D5518BDCBF000EF2795 /* VRPPMySuperClass.m in Sources */ = {isa = PBXBuildFile; fileRef = AB909D5418BDCBF000EF2795 /* VRPPMySuperClass.m */; };
@@ -137,6 +147,11 @@
 		AB3CA56018B785200079964E /* NSArray+VRCheckMembers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+VRCheckMembers.m"; sourceTree = "<group>"; };
 		AB3CA58518B796A10079964E /* NSMutableDictionary+VRExchangeKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+VRExchangeKeys.h"; sourceTree = "<group>"; };
 		AB3CA58618B796A10079964E /* NSMutableDictionary+VRExchangeKeys.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+VRExchangeKeys.m"; sourceTree = "<group>"; };
+		AB907B7418DA09D300223363 /* libVRFoundationToolkitOSX.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libVRFoundationToolkitOSX.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB907B7518DA09D300223363 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		AB907B7818DA09D300223363 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		AB907B7918DA09D300223363 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		AB907B7A18DA09D300223363 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		AB909D4D18BDC86600EF2795 /* NSObject+VRPropertiesProcessing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+VRPropertiesProcessing.h"; sourceTree = "<group>"; };
 		AB909D4E18BDC86600EF2795 /* NSObject+VRPropertiesProcessing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+VRPropertiesProcessing.m"; sourceTree = "<group>"; };
 		AB909D5118BDCACE00EF2795 /* NSObject+VRPropertiesProcessingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+VRPropertiesProcessingTests.m"; sourceTree = "<group>"; };
@@ -164,6 +179,13 @@
 				AB3CA4B918B768EA0079964E /* UIKit.framework in Frameworks */,
 				AB3CA4B718B768EA0079964E /* Foundation.framework in Frameworks */,
 				AB3CA4BC18B768EA0079964E /* libVRFoundationToolkit.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB907B7118DA09D300223363 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +273,7 @@
 			children = (
 				AB3CA4A418B768EA0079964E /* libVRFoundationToolkit.a */,
 				AB3CA4B418B768EA0079964E /* VRFoundationToolkitTests.xctest */,
+				AB907B7418DA09D300223363 /* libVRFoundationToolkitOSX.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -261,6 +284,8 @@
 				AB3CA4A718B768EA0079964E /* Foundation.framework */,
 				AB3CA4B518B768EA0079964E /* XCTest.framework */,
 				AB3CA4B818B768EA0079964E /* UIKit.framework */,
+				AB907B7518DA09D300223363 /* Cocoa.framework */,
+				AB907B7718DA09D300223363 /* Other Frameworks */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -379,6 +404,16 @@
 			name = "NSMutableDictionary+VRExchangeKeys";
 			sourceTree = "<group>";
 		};
+		AB907B7718DA09D300223363 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AB907B7818DA09D300223363 /* Foundation.framework */,
+				AB907B7918DA09D300223363 /* CoreData.framework */,
+				AB907B7A18DA09D300223363 /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
 		AB909D5018BDC88700EF2795 /* NSObject+VRPropertiesProcessing */ = {
 			isa = PBXGroup;
 			children = (
@@ -401,6 +436,16 @@
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		AB907B7218DA09D300223363 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		AB3CA4A318B768EA0079964E /* VRFoundationToolkit */ = {
@@ -438,6 +483,23 @@
 			productReference = AB3CA4B418B768EA0079964E /* VRFoundationToolkitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		AB907B7318DA09D300223363 /* VRFoundationToolkitOSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB907B9318DA09D300223363 /* Build configuration list for PBXNativeTarget "VRFoundationToolkitOSX" */;
+			buildPhases = (
+				AB907B7018DA09D300223363 /* Sources */,
+				AB907B7118DA09D300223363 /* Frameworks */,
+				AB907B7218DA09D300223363 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VRFoundationToolkitOSX;
+			productName = VRFoundationToolkitOSX;
+			productReference = AB907B7418DA09D300223363 /* libVRFoundationToolkitOSX.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -461,6 +523,7 @@
 			targets = (
 				AB3CA4A318B768EA0079964E /* VRFoundationToolkit */,
 				AB3CA4B318B768EA0079964E /* VRFoundationToolkitTests */,
+				AB907B7318DA09D300223363 /* VRFoundationToolkitOSX */,
 			);
 		};
 /* End PBXProject section */
@@ -513,6 +576,23 @@
 				AB352DF418CBF46F00F6C8B6 /* EXTNil.m in Sources */,
 				AB352DF818CBF46F00F6C8B6 /* EXTSelectorChecking.m in Sources */,
 				AB352DF718CBF46F00F6C8B6 /* EXTScope.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB907B7018DA09D300223363 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB907BA018DA138400223363 /* VRURLConnectionChecker.m in Sources */,
+				AB907BA118DA138400223363 /* NSMutableDictionary+VRExchangeKeys.m in Sources */,
+				AB907BA218DA138400223363 /* NSArray+VRCheckMembers.m in Sources */,
+				AB907BA318DA138400223363 /* NSString+VRMd5.m in Sources */,
+				AB907BA418DA138400223363 /* NSDate+VRDurations.m in Sources */,
+				AB907BA518DA138400223363 /* NSFileManager+VRDocumentsDirectory.m in Sources */,
+				AB907BA618DA138400223363 /* VRProtocolConformation.m in Sources */,
+				AB907BA718DA138400223363 /* NSObject+VRPropertiesProcessing.m in Sources */,
+				AB907BA818DA138400223363 /* NSBundle+VRDisplayName.m in Sources */,
+				AB907B9F18DA137100223363 /* EXTScope.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -576,6 +656,7 @@
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 				STRIP_STYLE = debugging;
 				VALID_ARCHS = "armv7 armv7s";
@@ -613,6 +694,7 @@
 					"\" ./VRFoundationToolkit/Requirements/**\"",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 				STRIP_STYLE = debugging;
 				VALIDATE_PRODUCT = YES;
@@ -630,6 +712,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = "$(inherited)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 			};
 			name = Debug;
 		};
@@ -643,6 +726,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = "$(inherited)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 			};
 			name = Release;
 		};
@@ -702,6 +786,49 @@
 			};
 			name = Release;
 		};
+		AB907B9418DA09D300223363 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VRFoundationToolkit/VRFoundationToolkit-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				VALID_ARCHS = x86_64;
+			};
+			name = Debug;
+		};
+		AB907B9518DA09D300223363 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VRFoundationToolkit/VRFoundationToolkit-Prefix.pch";
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				VALID_ARCHS = x86_64;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -731,6 +858,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		AB907B9318DA09D300223363 /* Build configuration list for PBXNativeTarget "VRFoundationToolkitOSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB907B9418DA09D300223363 /* Debug */,
+				AB907B9518DA09D300223363 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
