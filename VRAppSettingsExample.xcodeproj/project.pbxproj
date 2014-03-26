@@ -57,6 +57,13 @@
 			remoteGlobalIDString = AB3CA4A318B768EA0079964E;
 			remoteInfo = VRFoundationToolkit;
 		};
+		ABBD52DF18E2E9EE00E1A50A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AB909D6F18BE127800EF2795 /* VRFoundationToolkit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AB907B7418DA09D300223363;
+			remoteInfo = VRFoundationToolkitOSX;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +109,7 @@
 			children = (
 				AB909D7518BE127800EF2795 /* libVRFoundationToolkit.a */,
 				AB909D7718BE127800EF2795 /* VRFoundationToolkitTests.xctest */,
+				ABBD52E018E2E9EE00E1A50A /* libVRFoundationToolkitOSX.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -197,7 +205,7 @@
 				AB909D7A18BE128E00EF2795 /* PBXTargetDependency */,
 			);
 			name = VRAppSettingsExample;
-			productName = IRAppSettingsExample;
+			productName = VRAppSettingsExample;
 			productReference = ABE888CC1842ED8B001FEF19 /* VRAppSettingsExample.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -208,7 +216,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = IVR;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Ivan Rublev http://ivanrublev.me ";
 			};
 			buildConfigurationList = ABE888C71842ED8B001FEF19 /* Build configuration list for PBXProject "VRAppSettingsExample" */;
@@ -249,6 +257,13 @@
 			fileType = wrapper.cfbundle;
 			path = VRFoundationToolkitTests.xctest;
 			remoteRef = AB909D7618BE127800EF2795 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		ABBD52E018E2E9EE00E1A50A /* libVRFoundationToolkitOSX.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libVRFoundationToolkitOSX.a;
+			remoteRef = ABBD52DF18E2E9EE00E1A50A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -343,7 +358,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -392,7 +406,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
