@@ -4,7 +4,7 @@
 <dict>
    <key>--company-id</key>
    <string>me.ivanrublev</string>
-   <key>--create-docset</key>
+   <key>--no-create-docset</key>
    <true/>
    <key>--ignore</key>
    <array>
@@ -13,14 +13,8 @@
    <string>Frameworks</string>
    <string>Testing</string>
    </array>
-   <key>--install-docset</key>
-   <true/>
-   <key>no-repeat-first-par</key>
-   <true/>
-<!--<key>index-desc</key>
-   <string>./README.md</string>-->
    <key>--output</key>
-   <string>/tmp</string>
+   <string>./help</string>
    <key>--project-company</key>
    <string>Ivan Rublev</string>
    <key>--project-name</key>
@@ -46,6 +40,6 @@
    <key>--exit-threshold</key>
    <integer>2</integer>
  	<key>--verbose</key>
-	<string>1</string>
+	<string>5</string>
 </dict>
 </plist>

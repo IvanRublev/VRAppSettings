@@ -21,6 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		AB4901C51A1CCCF8001FD0D9 /* AppledocSettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB4901C41A1CCCF8001FD0D9 /* AppledocSettings.plist */; };
 		AB909D7B18BE129300EF2795 /* libVRFoundationToolkit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB909D7518BE127800EF2795 /* libVRFoundationToolkit.a */; };
 		ABE888D01842ED8B001FEF19 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABE888CF1842ED8B001FEF19 /* Foundation.framework */; };
 		ABE888D21842ED8B001FEF19 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABE888D11842ED8B001FEF19 /* CoreGraphics.framework */; };
@@ -67,6 +68,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AB4901C41A1CCCF8001FD0D9 /* AppledocSettings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AppledocSettings.plist; sourceTree = "<group>"; };
 		AB909D6F18BE127800EF2795 /* VRFoundationToolkit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = VRFoundationToolkit.xcodeproj; path = VRAppSettingsExample/Requirements/VRFoundationToolkit/VRFoundationToolkit.xcodeproj; sourceTree = "<group>"; };
 		ABE888CC1842ED8B001FEF19 /* VRAppSettingsExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VRAppSettingsExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABE888CF1842ED8B001FEF19 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -182,6 +184,7 @@
 		ABE889151842F267001FEF19 /* VRAppSettings */ = {
 			isa = PBXGroup;
 			children = (
+				AB4901C41A1CCCF8001FD0D9 /* AppledocSettings.plist */,
 				ABE889161842F267001FEF19 /* VRAppSettings.h */,
 				ABE889171842F267001FEF19 /* VRAppSettings.m */,
 			);
@@ -274,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABE888EB1842ED8B001FEF19 /* Images.xcassets in Resources */,
+				AB4901C51A1CCCF8001FD0D9 /* AppledocSettings.plist in Resources */,
 				ABE888E31842ED8B001FEF19 /* Main_iPhone.storyboard in Resources */,
 				ABE888DA1842ED8B001FEF19 /* InfoPlist.strings in Resources */,
 			);
