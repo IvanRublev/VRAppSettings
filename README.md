@@ -1,6 +1,10 @@
 VRAppSettings
 =============
 
+[![CI Status](http://img.shields.io/travis/IvanRublev/VRAppSettings.svg?style=flat)](https://travis-ci.org/IvanRublev/VRAppSettings)
+[![Version](https://img.shields.io/cocoapods/v/VRAppSettings.svg?style=flat)](http://cocoadocs.org/docsets/VRAppSettings)
+[![License](https://img.shields.io/cocoapods/l/VRAppSettings.svg?style=flat)](http://cocoadocs.org/docsets/VRAppSettings)
+
 This superclass makes it easier to handle the user's preferences (app's settings). It's intended to be used in iOS primarily.
 
 A successor to this class keeps the app settings in properties and stores itself in the defaults system. Although the settings values will not be accessible through the [NSUserDefaults](https://developer.apple.com/library/ios/documentation/cocoa/reference/foundation/Classes/NSUserDefaults_Class) class directly, but only via the setters and getters of the `VRAppSettings` successor.
@@ -73,10 +77,31 @@ The properties of a successor class must be a primitive type or an object type, 
 
 The properties with names which begins from `const` will be excluded from the save or load processes. In such excluded properties you can store the runtime values that are counted on in the kept properties.
 
-Installation & Requirements
+
+Requirements
 ------------
 
-1. This class requires several utilities from the  [VRFoundationToolkit](https://github.com/IvanRublev/VRFoundationToolkit) repository. Add it to your project following installation instructions from that repositorie's [README](https://github.com/IvanRublev/VRFoundationToolkit/blob/master/README.md) file.
+iOS SDK 6.0+ 
+
+This class requires several utilities from the [VRFoundationToolkit](https://github.com/IvanRublev/VRFoundationToolkit) lib.
+
+Installation
+------------
+
+### Using CocoaPods
+
+VRAppSettings is available through [CocoaPods](http://cocoapods.org). Simply add the following line to your Podfile:
+
+    pod "VRAppSettings"
+
+and run `pods update` or `pods install`.
+
+
+### Manually
+
+_It's faster to use cocoapods, because this lib has two layers of dependencies, but if you want you can set all up manually._
+
+1. Add [VRFoundationToolkit](https://github.com/IvanRublev/VRFoundationToolkit) and all dependencies following installation instruction form the appropriate [README](https://github.com/IvanRublev/VRFoundationToolkit#manually) file.
 2. Subtree the `VRAppSettings` repository in to the `Requirements` subdirectory of your project's directory via following command:
 	
 	```git subtree add --prefix=Requirements/VRAppSettings --squash https://github.com/IvanRublev/VRAppSettings.git master```
@@ -85,15 +110,13 @@ Installation & Requirements
 
 And it's ready to use! 
 
-### Documentation set for Xcode
-
-If you have an [appledoc](https://github.com/tomaz/appledoc) installed in your system you can open the `VRAppSettingsExample` project and build the `Docset for Xcode` target. This will add description of the `VRAppSettings` class to your Xcode help system.
 
 ### ARC
 
 This class requires ARC.
 
 If you are going to use this class into a project that does not yet use [Automatic Reference Counting](http://clang.llvm.org/docs/AutomaticReferenceCounting.html), you will need to set the `-fobjc-arc` compiler flag on `NSObject+VRPropertiesProcessing.m` and `VRAppSettings.m` files under the "Compile Sources" section in the "Build Phases" tab of your project.
+
 
 Licence
 -------
