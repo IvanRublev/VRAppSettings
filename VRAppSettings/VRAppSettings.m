@@ -164,4 +164,14 @@
     [self encodePropertiesWithCoder:aCoder];
 }
 
+#pragma mark -
+#pragma mark NSCopying protocol realized via properties processing
+- (id)copyWithZone:(NSZone *)zone
+{
+    id settingsCopy = [[[self class] alloc] initWithDeveloperDefaults];
+    [self deepCopyPropertiesTo:settingsCopy];
+    return settingsCopy;
+}
+
+
 @end

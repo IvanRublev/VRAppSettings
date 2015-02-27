@@ -60,7 +60,7 @@
  
  If you need to keep several sets of settings you can make several successors of the `VRAppSettings` class and return different strings from the `-userDefaultsKeyPostfix` method to separate settings sets.
 */
-@interface VRAppSettings : NSObject
+@interface VRAppSettings : NSObject <NSCopying>
 
 /** -----------------------------------------
  *  @name Methods that are compulsory to override in subclass
