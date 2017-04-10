@@ -1,5 +1,5 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
-target 'VRAppSettingsExample', :exclusive => true do
+target 'VRAppSettingsExample' do
   pod "VRAppSettings", :path => "../"
 end

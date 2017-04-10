@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "VRAppSettings"
-  s.version          = "0.1.2"
+  s.version          = "0.1.3"
   s.summary          = "Object representation for app's settings via class properties, keept in user's defaults."
   s.description      = <<-DESC
                        This superclass makes it easier to handle the user's preferences (app's settings). It's intended to be used in iOS primarily.
